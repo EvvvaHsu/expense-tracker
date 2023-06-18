@@ -1,0 +1,45 @@
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-5">
+            <form action="/restaurants" method="POST">
+
+                <div class="mb-3">
+                    <label for="name" class="form-label">名稱*</label>
+                    <input id="name" type="text" name="name" class="form-control" required="required">
+                </div>
+
+                <div class="mb-3">
+                    <label for="start" class="form-label">Start date:</label> <br>
+                    <input type="date" id="start" name="trip-start" value="2018-07-22" min="2018-01-01" class="form-control"
+                        max="2018-12-31">
+                </div>
+
+                <div class="mb-3">
+                    <label for="category" class="form-label">類別*</label>
+                    <select id="category" name="category" class="form-select" aria-label="category selection">
+
+                        <option value="全部"> 所有分類 </option>
+                        <option value="家居物業"> 家居物業 </option>
+                        <option value="交通出行"> 交通出行 </option>
+                        <option value="休閒娛樂"> 休閒娛樂 </option>
+                        <option value="餐飲食品"> 餐飲食品 </option>
+                        <option value="其他"> 其他 </option>
+
+                    </select>
+
+                </div>
+
+                <div class="mb-3">
+                    <label for="amount" class="form-label">金額</label>
+                    <input id="amount" name="amount" type="text" class="form-control">
+                </div>
+
+
+                <div class="col-12">
+                    <button class="btn btn-primary" type="submit">新增</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
