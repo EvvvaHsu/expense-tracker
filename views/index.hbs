@@ -13,9 +13,11 @@
                             aria-label="Default select example">
                             <option selected disabled>類別</option>
                             <option value="all">全部</option>
-                            {{#each categories}}
-                            <option value="{{this._id}}">{{this.name}}</option>
-                            {{/each}}
+                            <option value="all">家居物業</option>
+                            <option value="all">交通出行</option>
+                            <option value="all">休閒娛樂</option>
+                            <option value="all">餐飲食品</option>
+                            <option value="all">其他</option>
                         </select>
                     </form>
                 </div>
@@ -41,9 +43,14 @@
             </thead>
 
             <tbody>
+                {{#each records}}
                 <tr>
-                    
+                    <td>{{{ this.category.icon }}}</td>
+                    <td>{{ this.name }}</td>
+                    <td>{{ this.date }}</td>
+                    <td>{{ this.amount }}</td>
                 </tr>
+                {{/each}}
             </tbody>
         </table>
     </div>
