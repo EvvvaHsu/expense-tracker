@@ -9,7 +9,7 @@ module.exports = app => {
     app.use(passport.initialize())
     app.use(passport.session())
 
-    passport.use(new LocalStratrgy({ usernameField: 'email' }, (email, password, done) => {
+    passport.use(new LocalStrategy({ usernameField: 'email' }, (email, password, done) => {
         UserModel.findOne({ email })
         .then(user => {
             if (!user) {
