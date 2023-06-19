@@ -9,25 +9,25 @@ const recordSchema = new Schema({
     },
     date: {
         type: Date,
-        required: false,
+        required: true,
         default: Date.now
     },
     amount: {
         type: Number,
-        required: false,
+        required: true,
         // min: [1, 'at least one dollar']
     },
     userId: {
         type: Schema.Types.ObjectId,     //關聯資料設定
         ref: 'UserModel',
         index: true,
-        required: false
+        required: true
     },
     categoryId: {
         type: Schema.Types.ObjectId,     //關聯資料設定
         ref: 'CategoryModel',
         index: true,
-        required: false
+        required: true
       }
 })
 

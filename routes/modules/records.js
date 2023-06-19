@@ -7,18 +7,18 @@ router.get('/new', (req, res) => {
 })
 
 router.post('/', (req, res) => {
-    const userId = req.user._id
-    // const categoryId
-    const { name, date, amount } = req.body
+    // const userId = req.user._id
+    // // const categoryId
+    // const { name, date, amount } = req.body
     
-    const record = new RecordModel({ name, userId, date, amount })
+    // const record = new RecordModel({ name, userId, date, amount })
 
-    return record.save()
-    .then(() => res.redirect('/')
-    .catch(err => console.log('err!', err))
-    )
+    // return record.save()
+    // .then(() => res.redirect('/')
+    // .catch(err => console.log('err!', err))
+    // )
 
-    
+    res.render('/')
 })
 
 module.exports = router

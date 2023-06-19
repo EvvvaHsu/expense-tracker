@@ -16,25 +16,25 @@ const { seedUsers, seedRecords } = require('../seedData')
 db.once('open', () => {
 
     Promise.all(
-        seedUsers.map((seedUser, seedUserIndex) => {
+        seedUsers.map((user, userIndex) => {
 
             return bcrypt
                 .genSalt(10)
-                .then(salt => bcrypt.hash(seedUser.password, salt))
+                .then(salt => bcrypt.hash(user.password, salt))
                 .then(hash => UserModel.create({
-                    name: seedUser.name,
-                    email: seedUser.email,
+                    name: user.name,
+                    email: user.email,
                     password: hash
                 }))
-                .then((seedUser) => {
-                    console.log('seeduser created.')
+                .then((user) => {
+                    console.log('user created.')
                     const userRecord = []
                     return Promise.all(
                         seedRecords.map(seedRecord => {
                             return CategoryModel.findOne({ name: seedRecord.categoryName })
                                 .lean()
                                 .then((categoryName) => {
-                                    seedRecord.userId = seedUser._id
+                                    seedRecord.userId = user._id
                                     seedRecord.categoryId = categoryName._id
                                     userRecord.push(seedRecord)
                                 })
