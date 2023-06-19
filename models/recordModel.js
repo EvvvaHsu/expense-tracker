@@ -1,31 +1,35 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
+
 const recordSchema = new Schema({
     name: {
         type: String,
-        required: true
+        required: true,
+        trim: true
     },
     date: {
         type: Date,
-        required: true
+        required: false,
+        default: Date.now
     },
     amount: {
         type: Number,
-        required: true
+        required: false,
+        // min: [1, 'at least one dollar']
     },
     userId: {
-        type: Schema.Types.ObjectId,
+        type: Schema.Types.ObjectId,     //關聯資料設定
         ref: 'User',
         index: true,
-        required: true
+        required: false
     },
     categoryId: {
-        type: Schema.Types.ObjectId,
+        type: Schema.Types.ObjectId,     //關聯資料設定
         ref: 'Category',
         index: true,
-        required: true
+        required: false
       }
 })
 
 
-module.exports = mongoose.model('recordModel', recordSchema)
+module.exports = mongoose.model('RecordModel', recordSchema)
