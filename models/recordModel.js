@@ -19,13 +19,13 @@ const recordSchema = new Schema({
     },
     userId: {
         type: Schema.Types.ObjectId,     //關聯資料設定
-        ref: 'User',
+        ref: 'UserModel',
         index: true,
         required: false
     },
     categoryId: {
         type: Schema.Types.ObjectId,     //關聯資料設定
-        ref: 'Category',
+        ref: 'CategoryModel',
         index: true,
         required: false
       }
