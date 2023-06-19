@@ -47,7 +47,7 @@
                 <tr>
                     <td>{{{ this.category.icon }}}</td>
                     <td>{{ this.name }}</td>
-                    <td>{{ this.date }}</td>
+                    <td>{{ dateFormat this.date "YYYY-MM-DD" }}</td>
                     <td>{{ this.amount }}</td>
                 </tr>
                 {{/each}}

@@ -1,6 +1,9 @@
 const express = require("express")
 const exphbs = require("express-handlebars")
 
+var handlebars = require('handlebars');
+handlebars.registerHelper('dateFormat', require('handlebars-dateformat'));
+
 if (process.env.NODE_ENV !== 'production') {
     require('dotenv').config()
 }
