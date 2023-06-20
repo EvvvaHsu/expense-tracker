@@ -3,13 +3,11 @@ const seedUsers = [
         name: '廣志',
         email: 'user1@gmail.com',
         password: '12345678',
-        recordNumber: [0, 1, 3, 4]
     },
     {
         name: '小新',
         email: 'user2@gmail.com',
         password: '12345678',
-        recordNumber: [0, 1, 3, 4]
     }
 ]
 

@@ -27,7 +27,7 @@ db.once('open', () => {
                     password: hash
                 }))
                 .then((user) => {
-                    console.log('user created.')
+                    console.log('recordSeeder user 建立成功')
                     const userRecord = []
                     return Promise.all(
                         seedRecords.map(seedRecord => {

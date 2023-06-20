@@ -25,6 +25,6 @@ db.once('open', () => {
         .then(() => {
             db.close()
         })
-    console.log('done.')
+    console.log('categorySeeder建立成功')
     
 })
