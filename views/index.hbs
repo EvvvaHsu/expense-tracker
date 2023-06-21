@@ -11,6 +11,7 @@
                     <form action="/" method="POST">
                         <select class="form-select" name="categoryId" id="categoryId" onchange="this.form.submit()"
                             aria-label="Default select example">
+                            <option selected disabled>所有類別</option>
                             <option value="all">全部</option>
                             {{#each categories}}
                             <option value="{{this._id}}">{{ this.name }}</option>
@@ -44,8 +45,8 @@
 
             <tbody>
                 {{#each records}}
-                <tr>
-                    <td>{{{this.categoryId.icon}}}</td>
+                <tr class="records">
+                    <td>{{{this.categoryId.icon}}}{{this.categoryId.name}}</td>
                     <td>{{ this.name }}</td>
                     <td>{{ dateFormat this.date "YYYY-MM-DD" }}</td>
                     <td>{{ this.amount }}</td>
