@@ -47,14 +47,17 @@ router.post('/register', (req, res) => {
                     errors, name, email, password, confirmPassword
                 })
             }
-            return UserModel.create({
-                name,
-                email,
-                password
-            })
-                .then(() => res.redirect('/'))
-                .catch(err => console.log(err))
 
+            return bcrypt
+                .genSalt(10)
+                .then(salt => bcrypt.hash(password, salt))
+                .then(hash => UserModel.create({
+                    name,
+                    email,
+                    password: hash
+                }))
+                    .then(() => res.redirect('/'))
+                    .catch(err => console.log(err))            
         })
         .catch(err => console.log(err))
 })
