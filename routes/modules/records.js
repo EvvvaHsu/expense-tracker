@@ -47,15 +47,20 @@ router.get('/:id/edit', (req, res) => {
 
 router.put('/:id', (req, res) => {
     const _id = req.params.id
-    
+
     RecordModel.findByIdAndUpdate(_id, req.body)
-    .then(()=> {
-        console.log(req.body)
-        res.redirect('/')
-    })
-    .catch(error => console.log(error))
+        .then(() => {
+            console.log(req.body)
+            res.redirect('/')
+        })
+        .catch(error => console.log(error))
 })
 
-
+router.delete('/:id', (req, res) => {
+    const _id = req.params.id
+    RecordModel.findByIdAndDelete(_id)
+    .then(() => res.redirect('/'))
+    .catch(error => console.log(error))
+})
 
 module.exports = router
