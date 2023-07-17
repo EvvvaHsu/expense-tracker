@@ -50,7 +50,7 @@ router.put('/:id', (req, res) => {
 
     RecordModel.findByIdAndUpdate(_id, req.body)
         .then(() => {
-            console.log(req.body)
+            // console.log(req.body)
             res.redirect('/')
         })
         .catch(error => console.log(error))

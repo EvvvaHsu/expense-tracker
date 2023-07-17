@@ -1,4 +1,3 @@
-////////做一張 record model 的表，需包含 name, date, amount, userId, categoryId
 
 if (process.env.NODE_ENV !== 'production') {
     require('dotenv').config()
@@ -11,7 +10,6 @@ const RecordModel = require('../recordModel')
 const UserModel = require('../userModel')
 const { seedUsers, seedRecords } = require('../seedData')
 
-///////將資料寫入
 
 db.once('open', () => {
 

@@ -5,20 +5,21 @@
 
                 <div class="mb-3">
                     <label for="name" class="form-label">名稱*</label>
-                    <input id="name" type="text" name="name" class="form-control" value="{{record.name}}"
-                        required="required">
+                    <input id="name" type="text" name="name" class="form-control" value="{{record.name}}" maxlength="10"
+                        required>
                 </div>
 
                 <div class="mb-3">
-                    <label for="date" class="form-label">Start date:</label> <br>
-                    <input type="date" id="date" name="date" min="2000-01-01" class="form-control" max="2100-12-31"
-                        value="{{ record.date }}" required="required">
+                    <label for="date" class="form-label">日期*</label> <br>
+                    <small>2023-01-01~2024-12-31</small>
+                    <input type="date" id="date" name="date" min="2023-01-01" class="form-control" max="2024-12-31"
+                        value="{{ record.date }}" required>
                 </div>
 
                 <div class="mb-3">
                     <label for="categoryId" class="form-label">類別*</label>
                     <select id="categoryId" name="categoryId" class="form-select" aria-label="category selection"
-                        required="required">
+                        required>
 
                         <option selected disabled>{{record.categoryId.name}}</option>
 
@@ -31,9 +32,8 @@
                 </div>
 
                 <div class="mb-3">
-                    <label for="amount" class="form-label">金額</label>
-                    <input id="amount" name="amount" type="text" value="{{record.amount}}" class="form-control"
-                        required="required">
+                    <label for="amount" class="form-label">金額*</label>
+                    <input id="amount" name="amount" type="number"  min="" value="{{record.amount}}" class="form-control" required>
                 </div>
 
 

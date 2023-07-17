@@ -5,18 +5,19 @@
 
                 <div class="mb-3">
                     <label for="name" class="form-label">名稱*</label>
-                    <input id="name" type="text" name="name" class="form-control" required="required">
+                    <input id="name" type="text" name="name" class="form-control" maxlength="10" placeholder="最多10個字" required>
                 </div>
 
                 <div class="mb-3">
-                    <label for="date" class="form-label">Start date:</label> <br>
-                    <input type="date" id="date" name="date" value="" min="2022-01-01" class="form-control"
-                        max="2024-12-31">
+                    <label for="date" class="form-label">日期*</label> <br>
+                    <small>2023-01-01~2024-12-31</small>
+                    <input type="date" id="date" name="date" value="" min="2023-01-01" class="form-control"
+                        max="2024-12-31" required> 
                 </div>
 
                 <div class="mb-3">
-                    <label for="category" class="form-label">類別*</label>
-                    <select id="category" name="categoryId" class="form-select" aria-label="category selection">
+                    <label for="categoryId" class="form-label">類別*</label>
+                    <select id="categoryId" name="categoryId" class="form-select" aria-label="category selection" required>
 
                         <option selected disabled>{{record.categoryId.name}}</option>
 
@@ -29,8 +30,8 @@
                 </div>
 
                 <div class="mb-3">
-                    <label for="amount" class="form-label">金額</label>
-                    <input id="amount" name="amount" type="text" class="form-control">
+                    <label for="amount" class="form-label">金額*</label>
+                    <input id="amount" name="amount" type="number" min="" class="form-control" placeholder="請填入整數" required>
                 </div>
 
 
