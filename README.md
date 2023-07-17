@@ -27,7 +27,7 @@
 ![Static Badge](https://img.shields.io/badge/mongoose-5.9.7-red.svg)
 ![Static Badge](https://img.shields.io/badge/passport--facebook-3.0.0-red.svg)
 ![Static Badge](https://img.shields.io/badge/passport--local-1.0.0-red.svg)
-![Static Badge](https://img.shields.io/badge/dotdev-16.3.1-red.svg)
+![Static Badge](https://img.shields.io/badge/dotenv-16.3.1-red.svg)
 
 ## Installing - 專案安裝流程
 
