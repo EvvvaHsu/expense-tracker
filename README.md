@@ -2,7 +2,7 @@
 
 ## 專案畫面
 
-![image](https://github.com/EvvvaHsu/expense-tracker/blob/d81e37d3af310b1883d0fcb0ab933916b42e4580/public/images/login-page.png)
+![image](https://github.com/EvvvaHsu/expense-tracker/blob/a00ea3b1375787e91655272a9ef94bcdd5aab13a/public/images/login-page.png)
 
 ![image](https://github.com/EvvvaHsu/expense-tracker/blob/d81e37d3af310b1883d0fcb0ab933916b42e4580/public/images/home-page.png)
 
