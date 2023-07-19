@@ -27,6 +27,7 @@
 ![Static Badge](https://img.shields.io/badge/mongoose-5.9.7-red.svg)
 ![Static Badge](https://img.shields.io/badge/passport--facebook-3.0.0-red.svg)
 ![Static Badge](https://img.shields.io/badge/passport--local-1.0.0-red.svg)
+![Static Badge](https://img.shields.io/badge/passport--google--oauth2-0.2.0-red.svg)
 ![Static Badge](https://img.shields.io/badge/dotenv-16.3.1-red.svg)
 
 ## Installing - 專案安裝流程
@@ -40,7 +41,7 @@ git clone https://github.com/EvvvaHsu/expense-tracker.git
 2. 安裝 npm 套件
 
 ```
-在 Terminal 輸入 npm install 指令
+npm i
 ```
 
 3. 修改環境參數，將 .env.example 檔案修改為自己的 key
