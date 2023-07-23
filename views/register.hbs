@@ -6,19 +6,24 @@
         <div class="mb-3">
           <label for="name" class="mb-2">Name</label>
           <input type="text" id="name" name="name" class="form-control" placeholder="Enter Name" value="{{ name }}">
+          {{#if errors}}<span class="text-danger">{{ errors.name.msg }}</span> {{/if}}
         </div>
         <div class="mb-3">
           <label for="email" class="mb-2">Email</label>
           <input type="email" id="email" name="email" class="form-control" placeholder="Enter Email" value="{{ email }}">
+          {{#if errors}}<span class="text-danger">{{ errors.email.msg }}</span> {{/if}}
         </div>
         <div class="mb-3">
-          <label for="password" class="mb-2">Password</label>
+          <label for="password" class="mb-2">Password</label> <br>
+          <small>Password must be at least 6 characters to 12 characters</small>
           <input type="password" id="password" name="password" class="form-control" placeholder="Enter Password" value="{{ password }}">
+           {{#if errors}}<span class="text-danger">{{ errors.password.msg }}</span> {{/if}}
         </div>
         <div class="mb-3">
           <label for="confirmPassword" class="mb-2">Confirm Password</label>
           <input type="password" id="confirmPassword" name="confirmPassword" class="form-control"
             placeholder="Confirm Password" value="{{ confirmPassword }}">
+             {{#if errors}}<span class="text-danger">{{ errors.confirmPassword.msg }}</span> {{/if}}
         </div>
         <button type="submit" class="btn btn-primary btn-block">Register</button>
         <a href="/auth/facebook" class="btn btn-info btn-block">Facebook Login</a>
