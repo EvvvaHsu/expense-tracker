@@ -20,6 +20,9 @@ router.get('/', (req, res) => {
           records.forEach(record => {
             totalAmount += record.amount
           })
+          records.map(record => {
+            record.date = new Date(record.date).toISOString().slice(0, 10)
+          })
           return res.render('index', { categories, records, totalAmount })
         })
         .catch(error => console.log(error))
@@ -44,6 +47,9 @@ router.post('/', (req, res) => {
           let totalAmount = 0
           records.forEach(record => {
             totalAmount += record.amount
+          })
+          records.map(record => {
+            record.date = new Date(record.date).toISOString().slice(0, 10)
           })
           return res.render('index', { categories, categoryId, records, totalAmount })
         })

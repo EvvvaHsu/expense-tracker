@@ -31,8 +31,8 @@ router.get('/:id/edit', (req, res) => {
         .populate('categoryId')
         .lean()
         .then(record => {
-          record.date = record.date.toISOString().slice(0, 10)
-          // console.log(record)
+          record.date = new Date(record.date).toISOString().slice(0, 10)
+          // console.log(record.date)
           // console.log(categories)
           res.render('edit', { record, categories })
         })
